@@ -15,6 +15,45 @@ function parseData( content ){
 	console.log(content);
 }
 
+
+/*
+$(document).ready(loadData);
+
+function loadData(){
+    $.ajax({ url: 'data.page'}).then( parseData );
+}
+
+function parseData( content ){
+
+    var start = content.indexOf('panel-body', start);
+    start = content.indexOf('tableTitle', start+1);
+    snippet = content.slice(start, start+1000)
+    var regex = /<td>(\w*) ([0-9]{1,2})[a-z]{2}, ([0-9]{4})/sm;
+    debugger;
+    var results = snippet.match(regex);
+    console.log(results);
+}
+
+php version:
+
+<?php
+
+
+$content = file_get_contents('data.page');
+
+$start = strpos($content,'panel-body');
+$start = strpos($content,'tableTitle', $start);
+
+$snippet = substr($content, $start, 1000);
+
+$matches = [];
+preg_match_all('/<td>(\w*) ([0-9]{1,2})[a-z]{2}, ([0-9]{4})/', $snippet, $matches, 'sm');
+
+?>
+
+
+*/
+
 	</script>
 </head>
 <body>

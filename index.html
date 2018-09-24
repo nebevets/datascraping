@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+	<script type="text/javascript">
+		
+$(document).ready(loadData);
+
+function loadData(){
+	$.ajax({ url: 'data.page'}).then( parseData );
+}
+
+function parseData( content ){
+	console.log(content);
+}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
